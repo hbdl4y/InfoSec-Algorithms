@@ -10,4 +10,6 @@ a = []
 for i in reversed(range(0, t)):
     a.append(int(x / (2 ** (i * w))))
     x = x % (2 ** (i * w))
+    print(a)
+    print(x)
 print(a)
