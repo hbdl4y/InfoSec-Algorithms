@@ -1,1 +1,1 @@
-Disastrously bad code that could kill your machine. Mainly for me learning how to use GitHub.
+Disastrously bad code. Mainly for me learning how to use GitHub.
