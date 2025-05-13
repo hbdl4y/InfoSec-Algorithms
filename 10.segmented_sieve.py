@@ -1,3 +1,7 @@
+# Segmented sieve
+# Input: n, d (Sieving block size)
+# Output: All prime numbers smaller or equal to n
+
 import math
 
 def odd(a):
@@ -6,7 +10,7 @@ def odd(a):
             a.remove(x)
     return a # Removes all even numbers from a_block
 
-def sent(a, n):
+def normal_sieve(a, n):
     c = []
 
     for p in a:
@@ -18,7 +22,7 @@ def sent(a, n):
         c.clear()
     return a # Normal sieve. Used to find p (prime numbers smaller than sqrt(n))
 
-def sepd(a, p, n, d):
+def segmented_sieve(a, p, n, d):
     b = []; p.remove(2) # Removes 2 from p (Why is this important?) (The only even prime number is 2, DUH!)
     
     for i in range(int(n / (d * 2))):
@@ -51,5 +55,5 @@ if d > math.sqrt(n):
     print("d has to be smaller than sqrt(n)! Try again!")
     exit()
 
-sent(p, int(math.sqrt(n)) + 1)
-sepd(a, p, n, d)
+normal_sieve(p, int(math.sqrt(n)) + 1)
+segmented_sieve(a, p, n, d)
