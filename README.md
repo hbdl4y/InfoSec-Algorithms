@@ -1,1 +1,1 @@
-Disastrously bad code. Mainly for me learning how to use GitHub.
+Disastrously bad implementations of some algorithms used in InfoSec in Python.
